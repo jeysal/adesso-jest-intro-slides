@@ -8,7 +8,7 @@
   "scripts": {
     "build": "mdx-deck build deck.mdx",
     "start": "mdx-deck deck.mdx",
-    "format": "prettier --write {{adesso,src}/**/,}*.{mdx,js,css}"
+    "format": "prettier --write {{adesso,img,src}/**/,}*.{mdx,js,jsx,css}"
   },
   "devDependencies": {
     "mdx-deck": "^3.0.10",
