@@ -1,0 +1,39 @@
+import { Slide } from '../adesso';
+
+import jestPopularityGh from '!!file-loader!../img/jest-popularity-gh.png';
+import jestTrafficGh from '!!file-loader!../img/jest-traffic-gh.png';
+import jestDownloadsNpm from '!!file-loader!../img/jest-downloads-npm.png';
+
+<Slide>
+
+<div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+  <img
+    alt="Jest downloads on npm"
+    src={jestDownloadsNpm}
+    style={{ height: '30%', objectFit: 'contain' }}
+  />
+  <img
+    alt="Jest popularity on GitHub"
+    src={jestPopularityGh}
+    style={{ height: '12%', objectFit: 'contain' }}
+  />
+  <img
+    alt="Jest traffic on GitHub"
+    src={jestTrafficGh}
+    style={{ height: '58%', objectFit: 'contain' }}
+  />
+</div>
+
+</Slide>
+
+<Notes>
+
+chances are, if you're somewhat active in the JS ecosystem, you've at least heard of Jest before
+
+just a few years ago, Mocha and Jasmine dominated
+
+Jest now the most used Test Runner in the JS ecosystem
+
+how did it come to be this way, what makes Jest special?
+
+</Notes>
