@@ -1,0 +1,33 @@
+import { Slide } from '../adesso';
+
+<Slide>
+
+<span style={{ fontFamily: 'monospace' }}>subtract.js</span>
+
+```js
+import add from './add.js';
+
+const subtract = (a, b) => add(a, -b);
+
+export default subtract;
+```
+
+<span style={{ fontFamily: 'monospace' }}>subtract.test.js</span>
+
+```js
+import subtract from './subtract.js';
+
+test.todo('subtracts a number from another');
+```
+
+</Slide>
+
+<Notes>
+
+We add another arithmetic function that does subtraction
+
+And of course we don't use TDD, because we only ever write correct code anyway
+
+So we just put a todo here to write a test later
+
+</Notes>
