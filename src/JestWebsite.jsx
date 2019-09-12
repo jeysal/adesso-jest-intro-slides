@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDeck } from 'mdx-deck';
 
-import jestWebsiteFallback from '!!file-loader!../img/jest-website.png';
+import jestWebsiteFallback from '!!file-loader!../media/jest-website.png';
 
 const JestWebsite = () => {
   const { step, setState } = useDeck();
