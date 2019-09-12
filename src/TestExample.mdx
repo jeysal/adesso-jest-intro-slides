@@ -1,0 +1,79 @@
+import { Appear, Split } from 'mdx-deck';
+
+import { Slide } from '../adesso';
+
+<Slide>
+
+<Split>
+
+<div>
+
+<div style={{margin:'1rem'}}>
+<span style={{fontFamily: 'monospace'}}>index.js</span>
+
+```js
+export const add = (a, b) => a + b;
+```
+
+</div>
+
+<div style={{margin:'1rem'}}>
+<span style={{fontFamily: 'monospace'}}>index.test.js</span>
+
+```js
+import add from './add.js';
+
+test('adds two numbers', () => {
+  expect(add(1, 2)).toBe(3);
+});
+```
+
+</div>
+
+</div>
+
+<Appear>
+
+<div>
+
+Expect API examples
+
+```js
+expect(1).toBe(1);
+expect(1).toBeLessThan(2);
+expect([]).toHaveLength(0);
+expect([]).not.toContain(42);
+expect({ a: 1 }).toEqual({ a: 1 });
+expect({ a: { b: 1 } }).toHaveProperty('a.b', 1);
+expect({ a: 1 }).toMatchSnapshot();
+expect(mock).toHaveBeenCalledWith(42);
+// ...
+```
+
+</div>
+
+</Appear>
+
+</Split>
+
+</Slide>
+
+<Notes>
+
+absolute classic of a test example
+
+function that adds two numbers
+
+in the test, first part to note is the test framework
+
+explain declaring tests, pretty standard stuff
+
+there's also a popular alternative to just declaring tests: describe 'add', it 'adds two numbers', it 'throws if some precondition is given' or whatever
+
+expect is the built-in assertion library, which is pretty powerful and integrates with some of the other functions **!reveal!**
+
+something about snapshots and mocks, which we'll get into
+
+of course you're free to use another assertion library such as Node's assert or Chai, and there's even some level of support to make that easier
+
+</Notes>
