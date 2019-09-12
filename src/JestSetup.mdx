@@ -1,0 +1,37 @@
+import { Slide } from '../adesso';
+
+<Slide>
+
+<span style={{ fontFamily: 'monospace' }}>package.json</span>
+
+```diff
+{
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
++   "jest": "^24.9.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  }
+}
+```
+
+</Slide>
+
+<Notes>
+
+let's start by setting up an almost empty project
+
+only thing I've added here is Babel, which is the de-facto standard compiler for modern JS, and just configured it to allow us to use the latest version of JS
+
+we add the Jest dependency, this brings a lot of things out of the box
+
+many simple projects won't need any Jest config
+
+if we were to add config, we can do that with a jest key next to the babel one, or of course in a config file
+
+</Notes>
