@@ -1,0 +1,38 @@
+import { Slide } from '../adesso';
+
+<Slide>
+
+<div style={{margin:'1rem'}}>
+<span style={{fontFamily: 'monospace'}}>add.js -> add.ts</span>
+
+```diff
+-const add = (a, b) => a + b;
++const add = (a: number, b: number): number => a + b;
+
+ export default add;
+```
+
+</div>
+
+<div style={{margin:'1rem'}}>
+<span style={{fontFamily: 'monospace'}}>add.test.js -> add.test.ts</span>
+
+```
+File renamed without changes
+```
+
+</div>
+
+</Slide>
+
+<Notes>
+
+so now we can rename our files, e.g. add and the add test
+
+and add type annotations
+
+and the test will still be found, transformed, and run
+
+and we haven't added a single Jest configuration key yet
+
+</Notes>
