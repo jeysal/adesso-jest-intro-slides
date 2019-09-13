@@ -4,7 +4,11 @@ import jestCoverageRun from '!!file-loader!../media/jest-coverage-run.webm';
 
 <Invert>
 
-<video autoplay controls>
+<video
+  autoplay
+  controls
+  style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'scale-down' }}
+>
   <source src={jestCoverageRun} type="video/webm" />
 </video>
 

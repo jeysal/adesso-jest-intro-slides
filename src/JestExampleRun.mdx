@@ -4,7 +4,11 @@ import jestExampleRun from '!!file-loader!../media/jest-example-run.webm';
 
 <Invert>
 
-<video autoplay controls>
+<video
+  autoplay
+  controls
+  style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'scale-down' }}
+>
   <source src={jestExampleRun} type="video/webm" />
 </video>
 

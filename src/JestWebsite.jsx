@@ -11,7 +11,11 @@ const JestWebsite = () => {
         <img
           alt="Jest website screenshot"
           src={jestWebsiteFallback}
-          style={{ height: '90%' }}
+          style={{
+            maxWidth: '100%',
+            maxHeight: '100%',
+            objectFit: 'scale-down',
+          }}
         />
       ) : (
         <iframe
