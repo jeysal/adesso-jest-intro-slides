@@ -1,0 +1,27 @@
+import { Invert } from 'mdx-deck';
+
+import jestParallelization from '!!file-loader!../media/jest-parallelization.webm';
+
+<Invert>
+
+<video
+  autoplay
+  loop
+  style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'scale-down' }}
+>
+  <source src={jestParallelization} type="video/webm" />
+</video>
+
+</Invert>
+
+<Notes>
+
+Now of course another thing you've got to take care of if you want to deploy Jest at scale is parallelization
+
+Once you hit a certain threshold, Jest will automatically start running your tests in parallel
+
+This is done by spawning worker processes depending on the #CPUs
+
+And also Jest is really smart about parallelization, for instance it'll remember how long your tests each take and run the slowest ones first -> explain optimization
+
+</Notes>
