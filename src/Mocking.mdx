@@ -1,0 +1,111 @@
+import { Appear, Split } from 'mdx-deck';
+
+import { Slide } from '../adesso';
+import OnlyStep from './utils/OnlyStep';
+
+<Slide>
+
+<Split>
+
+<div>
+
+<div style={{margin:'1rem'}}>
+<span style={{fontFamily: 'monospace'}}>get-user.js</span>
+
+```js
+import fetch from './fetch';
+
+const getUser = id => fetch(`/users/${id}`);
+
+export default getUser;
+```
+
+</div>
+
+<div style={{margin:'1rem'}}>
+<span style={{fontFamily: 'monospace'}}>fetch.js</span>
+
+```js
+const fetch = path => {
+  // ...
+};
+
+export default fetch;
+```
+
+</div>
+
+</div>
+
+<Appear>
+
+<div>
+<span style={{fontFamily: 'monospace'}}>get-user.test.js</span>
+
+<OnlyStep step={1}>
+
+```js
+import getUser from './get-user';
+import fetch from './fetch';
+
+jest.mock('./fetch');
+
+test('fetches the user', () => {
+  fetch.mockReturnValue({ name: 'Alex' });
+  expect(getUser('42')).toEqual({ name: 'Alex' });
+  expect(fetch).toHaveBeenCalledWith('/users/42');
+});
+```
+
+</OnlyStep>
+
+<OnlyStep step={2}>
+
+```js
+import getUser from './get-user';
+import fetch from './fetch';
+
+jest.mock('./fetch');
+
+test('fetches the user', () => {
+  expect(getUser('42')).toEqual({ name: 'Alex' });
+  expect(fetch).toHaveBeenCalledWith('/users/42');
+});
+```
+
+</OnlyStep>
+
+</div>
+
+<div>
+<span style={{fontFamily: 'monospace'}}>__mocks__/fetch.js</span>
+
+```js
+const fetch = jest.fn().mockReturnValue({ name: 'Alex' });
+```
+
+</div>
+
+</Appear>
+
+</Split>
+
+</Slide>
+
+<Notes>
+
+get-user
+
+fetch - doesn't matter how the real one is implemented, because for the test we'll mock it anyway
+
+**!reveal!** test - jest.mock() - can then use mockReturnValue - can then use toHaveBeenCalledWith
+
+the way Jest does this - controls resolution via own runtime `require`
+
+**!reveal!** alternatively, we can provide a special `__mocks__` that allows us to customize
+
+by default Jest will export a jest.fn() for each exported function
+
+can override this to define the default `mockReturnValue` for all test files that mock this file without redundancy - no longer need it in get-user.test
+
+</Notes>
