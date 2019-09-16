@@ -1,0 +1,40 @@
+import { Invert } from 'mdx-deck';
+
+import jestWatchMode from '!!file-loader!../media/jest-watch-mode.webm';
+
+<Invert>
+
+<video
+  controls
+  style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'scale-down' }}
+>
+  <source src={jestWatchMode} type="video/webm" />
+</video>
+
+</Invert>
+
+<Notes>
+
+Now we've seen some nice features that Jest provides out of the box,
+but let me show you a real killer feature: The watch mode
+
+You can launch Jest with `--watch`, and as you can see, it does ... nothing
+
+This is because we're in a Git repository and don't have any changed files.
+But Jest is now watching the file system for changes, so if we make a change to subtract.js...
+
+note that it only runs the subtract test, because the add test does not depend on subtract.js
+
+if we change add.js however it'll rerun both, because they depend on add directly / transitively
+
+this is actually the first time we see a test failure printed,
+it's pretty nice with the code frame and everything
+
+you may have also seen these instructions down here,
+there's a whole bunch of interactive things you can do in watch mode
+
+show only failed tests, file name pattern
+
+community! typeahead, toggle coverage, etc.
+
+</Notes>
