@@ -1,0 +1,32 @@
+import { Invert } from 'mdx-deck';
+
+import jestFancyStuff from '!!file-loader!../media/jest-fancy-stuff.webm';
+
+<Invert>
+
+<video
+  controls
+  style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'scale-down' }}
+>
+  <source src={jestFancyStuff} type="video/webm" />
+</video>
+
+</Invert>
+
+<Notes>
+
+And all of this was just the stuff that comes out of the box.
+
+If you have a large project and invest some time configuring Jest, you can get even more out of it.
+
+For example, in my last project, we had this huge multi-project setup.
+
+In watch mode you can see the community-built typeahead mentioned earlier.
+
+Jest could also do the linting as well, this is TSLint running and reporting right in Jest alongside the tests
+
+Select individually which of your projects you want to test and they all run in one Jest instance
+
+And in general it's just really nice to run tests of so many subprojects at once
+
+</Notes>
