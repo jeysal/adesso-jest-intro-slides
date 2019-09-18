@@ -1,0 +1,30 @@
+import { Invert } from 'mdx-deck';
+
+import jestWithoutSnapshotTesting from '!!file-loader!../media/jest-without-snapshot-testing.webm';
+
+<Invert>
+
+<video
+  controls
+  style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'scale-down' }}
+>
+  <source src={jestWithoutSnapshotTesting} type="video/webm" />
+</video>
+
+</Invert>
+
+<Notes>
+
+Another feature of Jest that many have probably heard about, even if they haven't used it, is snapshot testing.
+
+And this really got popularized by Jest, it pretty much wasn't a thing a few years back before Jest came around.
+
+use case: say you have a function that renders some text by putting it in a DOM element with a bit of styling
+
+now we want to test that there is a proper margin applied to the element
+
+but we don't really know what the exact top right bottom left margins are, is it a pixel or a rem or .9? We also don't really care, as long as it's a reasonable value for the text.
+
+without snapshot testing, we might look at what it prints and then copy that over, but that's an annoying manual process and has to be done everytime we change the margin by like 1%
+
+</Notes>
