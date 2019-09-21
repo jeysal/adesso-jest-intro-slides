@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "name": "adesso-jest-intro-slides",
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
+  ]
+}
