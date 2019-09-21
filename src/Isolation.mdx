@@ -2,6 +2,8 @@ import { Slide } from '../adesso';
 
 <Slide>
 
+# Isolation
+
 <span style={{ fontFamily: 'monospace' }}>index.js</span>
 
 ```js
@@ -28,7 +30,7 @@ similarly to parallelization, another typical issue with scaling is isolation
 
 example: function with side effect that writes to a global
 
-Jest runs each of your test files in a new JS VM context, so if this function is also called in another test file, the test will still pass
+Jest runs each of your test files in a new JS VM context, so if this function is called in another test file as well, the test will still pass
 
 obviously you shouldn't write code like this anyway,
 but in reality issues like this are often very hidden and subtle and Jest helps you avoid them

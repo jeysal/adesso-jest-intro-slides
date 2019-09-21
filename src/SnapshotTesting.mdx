@@ -15,19 +15,11 @@ import jestSnapshotTesting from '!!file-loader!../media/jest-snapshot-testing.we
 
 <Notes>
 
-Snapshot testing provides a way to automate this process.
+Snapshot testing provides a way to automate this process. Instead of asserting that the margin is some specific value, we'll just tell Jest to snapshot this, and when it runs, it will automatically write the snapshot into the file. You can then check that it is appropriate and commit it with the test.
 
-Instead of asserting that the margin is some specific value, we'll just tell Jest to snapshot this, and when it runs, it will automatically write the snapshot into the file.
+And if the value ever changes, Jest will fail the test, giving you a nice diff and the option to update the snapshot if the change is correct with regard to the changes made to the code under test. Then commit and send for code review.
 
-You can then check that it is appropriate and commit it with the test.
-
-Note that this requires the popular formatter 'Prettier' to be installed so that Jest can write the file formatted properly.
-
-And if the value ever changes, Jest will fail the test, giving you a nice diff and the option to update the snapshot if the change is correct with regard to the changes made to the code under test.
-
-You may be wondering about 'inline' - there is also a classic way to do snapshots before we had this one, writes to a file that is then checked into version control.
-
-=> Large snapshots, don't want to mess up the test readability
+You may be wondering about 'inline' - there is also a classic way to do snapshots before we had this one, writes to a file that is then checked into version control. => Large snapshots, don't want to mess up the test readability
 
 But careful with large snapshots and snapshots in general, has use cases, but not a silver bullet, easy to overuse and make tests overly specific, you wanna be able to actually review the changes without being overwhelmed
 
