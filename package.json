@@ -5,13 +5,24 @@
   "author": "Tim Seckinger <seckinger.tim@gmail.com>",
   "repository": "https://github.com/jeysal/adesso-jest-intro-slides",
   "license": "<UNLICENSED>",
+  "bin": "app.js",
   "scripts": {
     "build": "mdx-deck build deck.mdx",
     "start": "mdx-deck deck.mdx",
-    "format": "prettier --write {{adesso,img,src}/**/,}*.{mdx,js,jsx,css}"
+    "format": "prettier --write {{adesso,img,src}/**/,}*.{mdx,js,jsx,css}",
+    "bundle": "pkg ."
+  },
+  "pkg": {
+    "assets": [
+      "public/**/*"
+    ]
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "mdx-deck": "^3.0.10",
+    "pkg": "^4.4.0",
     "prettier": "^1.18.2"
   }
 }
