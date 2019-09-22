@@ -15,16 +15,20 @@ import jestWithoutSnapshotTesting from '!!file-loader!../media/jest-without-snap
 
 <Notes>
 
-Another feature of Jest that many have probably heard about, even if they haven't used it, is snapshot testing.
+probably heard about, even if you haven't used: snapshot testing
 
-And this really got popularized by Jest, it pretty much wasn't a thing a few years back before Jest came around.
+this really got popularized by Jest, pretty much wasn't a thing before Jest came around.
 
-use case: say you have a function that renders some text by putting it in a DOM element with a bit of styling
+use case e.g.: function that renders text by putting it in a DOM element with a bit of styling
 
-now we want to test that there is a proper margin applied to the element
+now we want to test there's a proper margin applied to the element
 
-but we don't really know what the exact top right bottom left margins are, is it a pixel or a rem or .9? We also don't really care, as long as it's a reasonable value for the text.
+but we don't really know what the exact top right bottom left margin values are, a pixel or a rem or .9?
 
-without snapshot testing, we might look at what it prints and then copy that over, but that's an annoying manual process and has to be done everytime we change the margin by like 1%
+also don't really care, as long as it's a reasonable value for the text.
+
+without snapshot testing, might look at what it prints and then copy that over
+
+that's an annoying manual process, has to be done everytime we change the margin by like 10%
 
 </Notes>

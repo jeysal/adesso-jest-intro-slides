@@ -104,10 +104,10 @@ fetch - doesn't matter how the real one is implemented, because for the test we'
 
 **!reveal!** test - jest.mock() - can then use mockReturnValue - can then use toHaveBeenCalledWith
 
-the way Jest does this - controls resolution via own runtime `require` =>
+way Jest does this: controls resolution via own runtime `require` =>
 allows us to very simply inject the mock into the code under test
 
-**!reveal!** alternatively, we can provide a special `__mocks__` that allows us to customize
+**!reveal!** alternatively, provide a special `__mocks__` that will be swapped in
 
 by default Jest will export a jest.fn() for each exported function
 

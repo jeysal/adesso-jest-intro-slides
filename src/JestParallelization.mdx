@@ -16,12 +16,12 @@ import jestParallelization from '!!file-loader!../media/jest-parallelization.web
 
 <Notes>
 
-Now of course another thing you've got to take care of if you want to deploy Jest at scale is parallelization
+need to take care of parallelization if you want to deploy Jest at scale
 
 Once you hit a certain threshold, Jest will automatically start running your tests in parallel
 
 This is done by spawning worker processes depending on the #CPUs
 
-And also Jest is really smart about parallelization, for instance it'll remember how long your tests each take and run the slowest ones first -> explain optimization
+And also Jest is really smart about parallelization, remembers how long your tests each take and runs the slowest ones first -> explain optimization
 
 </Notes>
