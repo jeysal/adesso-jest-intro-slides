@@ -23,7 +23,7 @@ You can launch Jest with `--watch`, and as you can see, it does ... nothing
 This is because we're in a Git repository and don't have any changed files.
 But Jest is now watching the file system for changes, so if we make a change to subtract.js...
 
-note that it only runs the subtract test, because the add test does not depend on subtract.js
+note that it only runs the subtract test, because the add test does not depend on subtract.js, so Jest actually analyzes the dependencies between files
 
 if we change add.js however it'll rerun both, because they depend on add directly / transitively
 
@@ -31,7 +31,8 @@ this is actually the first time we see a test failure printed,
 it's pretty nice with the code frame and everything
 
 you may have also seen these instructions down here,
-there's a whole bunch of interactive things you can do in watch mode
+there's a whole bunch of interactive things you can do in watch mode,
+pretty nice in daily development workflow
 
 show only failed tests, file name pattern
 
